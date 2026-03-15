@@ -838,7 +838,8 @@ img {
   bottom: 0;
   opacity: 0;
   overflow: hidden;
-  background-image: url("images/hero-title-wordmark-no-star.png");
+  z-index: 1;
+  background-image: url("images/hero-title-wordmark-text.png");
   background-repeat: no-repeat;
   background-size: auto 100%;
   filter: drop-shadow(0 14px 30px rgba(0, 0, 0, 0.32));
@@ -859,11 +860,26 @@ img {
   transform: translate3d(18%, 0, 0);
 }
 
+.hero-title-arc {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  clip-path: inset(0 100% 0 0);
+  will-change: clip-path;
+}
+
+.hero-title-arc-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .hero-title-star {
   position: absolute;
-  left: 63.53%;
-  top: 28.6%;
-  width: 6.35%;
+  left: 63.37890625%;
+  top: 27.8571428571%;
+  width: 6.689453125%;
+  z-index: 3;
   opacity: 0;
   transform: translate3d(0, 0, 0) scale(0.28) rotate(-14deg);
   transform-origin: center;
@@ -885,8 +901,12 @@ img {
   animation: hero-title-panel-sien-in 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
 }
 
+.page-loaded .hero-title-arc {
+  animation: hero-title-arc-in 0.48s cubic-bezier(0.2, 0.9, 0.2, 1) 1.18s forwards;
+}
+
 .page-loaded .hero-title-star {
-  animation: hero-title-star-pop 0.62s cubic-bezier(0.2, 0.9, 0.2, 1.15) 1.26s forwards;
+  animation: hero-title-star-pop 0.62s cubic-bezier(0.2, 0.9, 0.2, 1.15) 1.72s forwards;
 }
 
 .hero-actions {
@@ -3712,6 +3732,15 @@ img {
   }
 }
 
+@keyframes hero-title-arc-in {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
 @keyframes hero-title-star-pop {
   0% {
     opacity: 0;
@@ -3757,6 +3786,11 @@ img {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+
+  .hero-title-arc {
+    animation: none;
+    clip-path: inset(0 0 0 0);
   }
 
   .hero-title-star {
