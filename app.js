@@ -556,18 +556,6 @@ document.addEventListener('DOMContentLoaded', () => {
       element.setAttribute('aria-label', translate(element.dataset.i18nAriaLabel));
     });
 
-    document.querySelectorAll('[data-i18n-split]').forEach((element) => {
-      const fullText = translate(element.dataset.i18nSplit).trim();
-      const parts = fullText.split(/\s+/).filter(Boolean);
-      const leftWord = parts.shift() ?? fullText;
-      const rightWord = parts.join(' ');
-
-      element.setAttribute('aria-label', fullText);
-      element.innerHTML = rightWord
-        ? `<span class="hero-title-word hero-title-word--left" aria-hidden="true">${escapeHtml(leftWord)}</span><span class="hero-title-word hero-title-word--right" aria-hidden="true">${escapeHtml(rightWord)}</span>`
-        : `<span class="hero-title-word hero-title-word--left" aria-hidden="true">${escapeHtml(leftWord)}</span>`;
-    });
-
     updateLanguageToggle();
     syncNavToggleLabel();
     updateStatus();

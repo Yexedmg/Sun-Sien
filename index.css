@@ -818,42 +818,75 @@ img {
 }
 
 .hero-title {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 0.08em;
-  max-width: 92vw;
+  width: clamp(18rem, 62vw, 34rem);
   margin: 0 auto;
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-size: clamp(3.4rem, 12vw, 7rem);
-  font-weight: 400;
-  line-height: 0.88;
-  letter-spacing: -0.06em;
-  white-space: nowrap;
-  color: #fff;
-  text-shadow: 0 14px 30px rgba(0, 0, 0, 0.26);
+  font-size: 0;
+  line-height: 0;
 }
 
-.hero-title-word {
-  display: inline-block;
+.hero-title-split {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 2048 / 560;
+}
+
+.hero-title-panel {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
   opacity: 0;
-  filter: blur(10px);
+  overflow: hidden;
+  background-image: url("images/hero-title-wordmark-no-star.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  filter: drop-shadow(0 14px 30px rgba(0, 0, 0, 0.32));
+  will-change: transform, opacity;
 }
 
-.hero-title-word--left {
-  transform: translate3d(-0.75em, 0, 0);
+.hero-title-panel--sun {
+  left: 0;
+  width: 44.189453125%;
+  background-position: left top;
+  transform: translate3d(-18%, 0, 0);
 }
 
-.hero-title-word--right {
-  transform: translate3d(0.75em, 0, 0);
+.hero-title-panel--sien {
+  right: 0;
+  width: 55.810546875%;
+  background-position: right top;
+  transform: translate3d(18%, 0, 0);
 }
 
-.page-loaded .hero-title-word--left {
-  animation: hero-title-word-left-in 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+.hero-title-star {
+  position: absolute;
+  left: 63.53%;
+  top: 28.6%;
+  width: 6.35%;
+  opacity: 0;
+  transform: translate3d(0, 0, 0) scale(0.28) rotate(-14deg);
+  transform-origin: center;
+  will-change: transform, opacity;
 }
 
-.page-loaded .hero-title-word--right {
-  animation: hero-title-word-right-in 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+.hero-title-star-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(255, 74, 74, 0.22));
+}
+
+.page-loaded .hero-title-panel--sun {
+  animation: hero-title-panel-sun-in 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+.page-loaded .hero-title-panel--sien {
+  animation: hero-title-panel-sien-in 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+.page-loaded .hero-title-star {
+  animation: hero-title-star-pop 0.62s cubic-bezier(0.2, 0.9, 0.2, 1.15) 1.26s forwards;
 }
 
 .hero-actions {
@@ -3276,7 +3309,7 @@ img {
   }
   .hero-content { transform: translateY(1vh); }
   .hero-kicker { font-size: 0.68rem; letter-spacing: 0.16em; }
-  .hero-title { font-size: min(22vw, 4.9rem); }
+  .hero-title { width: min(92vw, 24rem); }
   .hero-actions { margin-top: 46px; }
   .hero-cta-group { width: 100%; gap: 12px; }
   .hero-actions .btn { width: 100%; text-align: center; padding: 14px 28px; font-size: 0.95rem; }
@@ -3657,35 +3690,40 @@ img {
   }
 }
 
-@keyframes hero-title-word-left-in {
+@keyframes hero-title-panel-sun-in {
   0% {
     opacity: 0;
-    filter: blur(10px);
-    transform: translate3d(-0.75em, 0, 0);
-  }
-  45% {
-    opacity: 1;
+    transform: translate3d(-18%, 0, 0);
   }
   100% {
     opacity: 1;
-    filter: blur(0);
     transform: translate3d(0, 0, 0);
   }
 }
 
-@keyframes hero-title-word-right-in {
+@keyframes hero-title-panel-sien-in {
   0% {
     opacity: 0;
-    filter: blur(10px);
-    transform: translate3d(0.75em, 0, 0);
-  }
-  45% {
-    opacity: 1;
+    transform: translate3d(18%, 0, 0);
   }
   100% {
     opacity: 1;
-    filter: blur(0);
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes hero-title-star-pop {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 6%, 0) scale(0.28) rotate(-14deg);
+  }
+  55% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1.14) rotate(6deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
   }
 }
 
@@ -3715,10 +3753,15 @@ img {
     transform: none;
   }
 
-  .hero-title-word {
+  .hero-title-panel {
     animation: none;
     opacity: 1;
-    filter: none;
+    transform: none;
+  }
+
+  .hero-title-star {
+    animation: none;
+    opacity: 1;
     transform: none;
   }
 
