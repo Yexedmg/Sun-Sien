@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Sun Sien – Surinaams • Chinees • Caribisch Afhaalcentrum in Hoogvliet</title>
+  <meta name="description"
+    content="Sun Sien Afhaalcentrum – Al meer dan 40 jaar de beste Surinaamse, Chinese en Caribische gerechten in Hoogvliet. Bestel telefonisch of kom langs!">
+  <meta name="theme-color" content="#CA1414" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sun Sien – Surinaams • Chinees • Caribisch">
+  <meta property="og:description"
+    content="Al meer dan 40 jaar de beste Surinaamse, Chinese en Caribische gerechten in Hoogvliet.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sunsien.nl">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap"
+    rel="stylesheet">
+
+  <script>
+    document.documentElement.classList.add('js');
+    (() => {
+      const storageKey = 'sun-sien-home-loader-seen';
+      const isInternalReferrer = document.referrer.startsWith(window.location.origin);
+      let shouldShowLoader = false;
+
+      try {
+        const hasSeenLoader = window.sessionStorage.getItem(storageKey) === '1';
+        shouldShowLoader = !hasSeenLoader && !isInternalReferrer;
+
+        if (shouldShowLoader) {
+          window.sessionStorage.setItem(storageKey, '1');
+        }
+      } catch (error) {
+        shouldShowLoader = !isInternalReferrer;
+      }
+
+      if (shouldShowLoader) {
+        document.documentElement.classList.add('show-loading-screen');
+      }
+    })();
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="index.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://www.sunsien.nl/wp-content/uploads/2022/09/cropped-SunSien-colored@1x-32x32.png">
+</head>
+
+<body class="home-page">
+
+  <!-- ==================== LOADING SCREEN ==================== -->
+  <div class="loading-screen" id="loading-screen" aria-hidden="true">
+    <div class="loading-screen-inner">
+      <span class="loading-orb"></span>
+      <img src="images/hero-title-logo.png" alt="" class="loading-logo" decoding="async">
+      <span class="loading-line"></span>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" id="logo">
+        <img src="https://www.sunsien.nl/wp-content/uploads/2024/03/logo-voetbalclub.png2_-220x101.png"
+          alt="Sun Sien Logo" class="logo-img">
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html" class="active" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">Over Ons</a>
+        <a href="menu.html" data-i18n="nav.menu">Menu</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="tel:0104382505" class="nav-call-link" data-i18n="nav.callOrder">Bel & Bestel</a>
+        <p class="nav-call-note" data-i18n="common.callWaitNote"></p>
+      </nav>
+
+      <div class="header-actions">
+        <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch language to English">
+          <span class="language-toggle-icon" aria-hidden="true">🌐</span>
+          <span class="language-toggle-label" id="language-toggle-label">EN</span>
+        </button>
+        <a href="tel:0104382505" class="btn-call" id="nav-call-btn">
+          <svg class="call-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          <span class="call-text" data-i18n="common.callShort">Bellen</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Menu openen" data-i18n-aria-label="common.openMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img
+        src="https://www.sunsien.nl/wp-content/uploads/2022/08/WhatsApp-Image-2022-08-13-at-12.33.47-PM-1152x1536.jpeg"
+        alt="Sun Sien Afhaalcentrum" loading="eager">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-kicker" data-i18n="home.heroEyebrow">Welkom bij</p>
+      <h1 class="hero-title">
+        <span class="sr-only" data-i18n="home.heroTitle">Sun Sien</span>
+        <span class="hero-title-crop" aria-hidden="true">
+          <img src="images/hero-title-logo.png" alt="" decoding="async" class="hero-title-logo">
+        </span>
+      </h1>
+
+      <div class="hero-actions">
+        <div class="hero-cta-group">
+          <div class="hero-badge" id="hero-status-badge">
+            <span class="status-dot"></span>
+            <span id="hero-status">Nu geopend</span>
+          </div>
+          <div class="cta-stack cta-stack--light">
+            <a href="tel:0104382505" class="btn btn-glass btn-lg" id="hero-call-btn" data-i18n="nav.callOrder">Bel
+              &amp; Bestel</a>
+            <p class="cta-note" data-i18n="common.callWaitNote"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================== MENU CTA (Apple-style) ==================== -->
+  <section class="menu-cta-section" id="menu-preview">
+    <div class="container">
+      <div class="menu-cta-content">
+        <span class="label-tag" data-i18n="home.menuLabel">Populaire categorieen</span>
+        <h2 data-i18n="home.menuHeading">Ontdek onze gerechten</h2>
+        <a href="menu.html" class="btn btn-primary btn-lg" data-i18n="home.menuCta">Bekijk Volledige Menu
+          →</a>
+      </div>
+
+      <div class="menu-cta-cards">
+        <a class="food-card" href="menu.html#cat-broodjes">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/45-broodje-kerrie-kip-tif.jpg"
+            alt="Broodje Kerrie Kip" loading="lazy">
+          <div class="food-card-label">
+            <strong class="food-card-title">Broodjes</strong>
+          </div>
+        </a>
+        <a class="food-card" href="menu.html#cat-surinaams">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/117-moksie-metie-1-1024x957.jpg"
+            alt="Moksie Metie" loading="lazy">
+          <div class="food-card-label">
+            <strong class="food-card-title">Surinaams</strong>
+          </div>
+        </a>
+        <a class="food-card food-card--feature" href="menu.html#cat-nieuwe">
+          <div class="food-card-feature-copy">
+            <strong class="food-card-title">Nieuw</strong>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="about-section" id="over-ons">
+    <div class="container">
+      <div class="about-grid">
+        <div class="home-about-media">
+          <span class="label-tag home-about-label" data-i18n="nav.about">Over Ons</span>
+          <div class="about-image">
+            <img src="images/about-home.jpg" alt="Sun Sien Afhaalcentrum Hoogvliet" loading="lazy">
+            <div class="about-badge">
+              <span class="number">40+</span>
+              <span class="text">Jaar</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <h2 data-i18n="home.aboutHeading">Een begrip in Hoogvliet</h2>
+          <p data-i18n="home.aboutCopyOne">Heb je trek in Surinaams, Chinees of Caribisch eten? Dan ben je bij Sun
+            Sien aan het juiste adres. Al meer dan 40 jaar zijn we een vertrouwd afhaalcentrum in Hoogvliet en
+            omstreken.</p>
+          <p data-i18n="home.aboutCopyTwo">Je kunt vooral bij ons afhalen, maar ook even rustig iets eten. Kom gerust
+            langs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ==================== REVIEWS ==================== -->
+  <section class="reviews-section home-reviews-section" id="reviews">
+    <div class="container">
+      <div class="reviews-intro home-reviews-intro">
+        <span class="label-tag" data-i18n="home.reviewsLabel">Reviews</span>
+        <h2 data-i18n="home.reviewsHeading">Wat onze klanten zeggen</h2>
+      </div>
+
+      <div class="review-list home-review-list">
+        <a class="review-entry home-review-entry"
+          href="https://www.google.com/maps/search/Sun+Sien+Oude+Wal+47+Hoogvliet" target="_blank" rel="noreferrer">
+          <div class="review-stars" aria-hidden="true">★★★★★</div>
+          <blockquote data-i18n="home.reviewOneQuote">"Top plaats! Altijd lekker!"</blockquote>
+          <p class="review-author">Ilya</p>
+          <p class="review-source" data-i18n="home.reviewSource">Google</p>
+        </a>
+
+        <a class="review-entry home-review-entry"
+          href="https://www.google.com/maps/search/Sun+Sien+Oude+Wal+47+Hoogvliet" target="_blank" rel="noreferrer">
+          <div class="review-stars" aria-hidden="true">★★★★★</div>
+          <blockquote data-i18n="home.reviewTwoQuote">"Het was afhaal maar het eten was zeer goed voor de prijs."
+          </blockquote>
+          <p class="review-author">Mike Brandenburg</p>
+          <p class="review-source" data-i18n="home.reviewSource">Google</p>
+        </a>
+
+        <a class="review-entry home-review-entry"
+          href="https://www.google.com/maps/search/Sun+Sien+Oude+Wal+47+Hoogvliet" target="_blank" rel="noreferrer">
+          <div class="review-stars" aria-hidden="true">★★★★★</div>
+          <blockquote data-i18n="home.reviewThreeQuote">"Lekker broodje, geweldige Soto soep of roti rol."</blockquote>
+          <p class="review-author">Boudewijn Duivenvoorden</p>
+          <p class="review-source" data-i18n="home.reviewSource">Google</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-card" id="contact-hours">
+          <div class="card-icon">◷</div>
+          <h3 data-i18n="common.hours">Openingstijden</h3>
+          <div id="status-container"></div>
+          <table class="hours-table" id="hours-table">
+            <tbody>
+              <tr data-day="1" class="closed">
+                <td data-i18n="day.monday">Maandag</td>
+                <td data-i18n="status.closed">Gesloten</td>
+              </tr>
+              <tr data-day="2">
+                <td data-i18n="day.tuesday">Dinsdag</td>
+                <td>11:30 – 20:30</td>
+              </tr>
+              <tr data-day="3">
+                <td data-i18n="day.wednesday">Woensdag</td>
+                <td>11:30 – 20:30</td>
+              </tr>
+              <tr data-day="4">
+                <td data-i18n="day.thursday">Donderdag</td>
+                <td>11:30 – 20:30</td>
+              </tr>
+              <tr data-day="5">
+                <td data-i18n="day.friday">Vrijdag</td>
+                <td>11:30 – 20:30</td>
+              </tr>
+              <tr data-day="6">
+                <td data-i18n="day.saturday">Zaterdag</td>
+                <td>11:30 – 20:30</td>
+              </tr>
+              <tr data-day="0">
+                <td data-i18n="day.sunday">Zondag</td>
+                <td>12:30 – 20:30</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== MAP ==================== -->
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2024/03/logo-voetbalclub.png2_-220x101.png" alt="Sun Sien"
+            class="footer-logo">
+          <p>
+            <span data-i18n="brand.lineOne">Surinaams • Chinees • Caribisch</span><br>
+            <span data-i18n="brand.lineTwo">Afhaalcentrum in Hoogvliet</span>
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="menu.html" data-i18n="nav.menu">Menu</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact</a>
+          <a href="https://allergenen.sho-horeca.nl/kaart/sunsien" target="_blank"
+            data-i18n="common.allergens">Allergenen</a>
+        </div>
+        <div class="footer-contact">
+          <a href="tel:0104382505">010 438 2505</a>
+          <a href="mailto:info@sunsien.nl">info@sunsien.nl</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Oude+Wal+47+3193+EM+Hoogvliet+Rotterdam"
+            target="_blank" rel="noreferrer">Oude Wal 47, 3193 EM Hoogvliet Rotterdam</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 Sun Sien Afhaalcentrum – Alle rechten voorbehouden</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator" id="scroll-indicator" aria-hidden="true">
+    <span class="scroll-indicator-text" id="scroll-indicator-text">Scroll</span>
+    <span class="scroll-indicator-line"></span>
+  </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Terug naar boven"
+    data-i18n-aria-label="common.scrollTop">↑</button>
+
+  <script src="site-copy.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

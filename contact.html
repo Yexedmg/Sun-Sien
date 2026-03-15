@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Contact – Sun Sien Afhaalcentrum</title>
+  <meta name="description" content="Contactgegevens, veelgestelde vragen en openingstijden van Sun Sien in Hoogvliet.">
+  <meta name="theme-color" content="#CA1414" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="https://www.sunsien.nl/wp-content/uploads/2022/09/cropped-SunSien-colored@1x-32x32.png">
+</head>
+
+<body class="contact-page">
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" id="logo">
+        <img src="https://www.sunsien.nl/wp-content/uploads/2024/03/logo-voetbalclub.png2_-220x101.png"
+          alt="Sun Sien Logo" class="logo-img">
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">Over Ons</a>
+        <a href="menu.html" data-i18n="nav.menu">Menu</a>
+        <a href="contact.html" class="active" data-i18n="nav.contact">Contact</a>
+        <a href="tel:0104382505" class="nav-call-link" data-i18n="nav.callOrder">Bel &amp; Bestel</a>
+        <p class="nav-call-note" data-i18n="common.callWaitNote"></p>
+      </nav>
+
+      <div class="header-actions">
+        <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch language to English">
+          <span class="language-toggle-icon" aria-hidden="true">🌐</span>
+          <span class="language-toggle-label" id="language-toggle-label">EN</span>
+        </button>
+        <a href="tel:0104382505" class="btn-call" id="nav-call-btn">
+          <span class="call-icon">✆</span>
+          <span class="call-text" data-i18n="common.callShort">Bellen</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Menu openen" data-i18n-aria-label="common.openMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="contact-page-main">
+    <section class="contact-page-intro">
+      <div class="container">
+        <div class="contact-page-intro-shell contact-page-intro-shell--center">
+          <div class="contact-page-heading contact-page-heading--center">
+            <h1 data-i18n="contact.title">Contact</h1>
+            <p class="section-subtitle" data-i18n="contact.subtitle">Bekijk de veelgestelde vragen of neem direct
+              contact op.</p>
+            <div class="contact-copy-block">
+              <p><a href="tel:0104382505" class="contact-simple-value">010 438 2505</a></p>
+              <p data-i18n-html="contact.addressBlock">Oude Wal 47<br>3193 EM Hoogvliet Rotterdam</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <div class="faq-layout">
+          <div class="faq-intro">
+            <h2 data-i18n="contact.faqTitle">Veelgestelde vragen</h2>
+            <p class="section-subtitle" data-i18n="contact.faqSubtitle">Kort en duidelijk, zodat je snel weet waar je
+              aan toe bent.</p>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary data-i18n="faq.queueQuestion">Sta ik in dezelfde rij met mensen die aan de balie bestellen als ik
+                telefonisch bestel ?</summary>
+              <p data-i18n="faq.queueAnswer">Ja. Telefonische bestellingen en en mensen die bestelling aan de balie doen
+                hebben dezelfde wachtrij.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary data-i18n="faq.halalQuestion">Zijn er halal opties?</summary>
+              <p data-i18n="faq.halalAnswer">Op de publieke menukaart en allergenenkaart staat geen halal-label. Bel
+                even voor een specifiek gerecht als dit belangrijk is voor je bestelling.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary data-i18n="faq.phoneQuestion">Kan ik telefonisch bestellen?</summary>
+              <p data-i18n="faq.phoneAnswer">Ja, maar voor telefonisch geplaatste bestellingen geldt volgens de site
+                meestal minimaal een uur wachttijd voor afhalen.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary data-i18n="faq.fridayQuestion">Wanneer kan ik op vrijdag het beste bellen?</summary>
+              <p data-i18n="faq.fridayAnswer">Vrijdag is het tussen 11:30 en 12:30 vaak te druk aan de telefoon. De site
+                adviseert om tussen 09:00 en 11:00 te bellen.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-hours-section">
+      <div class="container">
+        <div class="contact-hours-shell">
+          <div class="contact-card" id="contact-hours">
+            <div class="card-icon">◷</div>
+            <h3 data-i18n="common.hours">Openingstijden</h3>
+            <div id="status-container"></div>
+            <table class="hours-table" id="hours-table">
+              <tbody>
+                <tr data-day="1" class="closed">
+                  <td data-i18n="day.monday">Maandag</td>
+                  <td data-i18n="status.closed">Gesloten</td>
+                </tr>
+                <tr data-day="2">
+                  <td data-i18n="day.tuesday">Dinsdag</td>
+                  <td>11:30 – 20:30</td>
+                </tr>
+                <tr data-day="3">
+                  <td data-i18n="day.wednesday">Woensdag</td>
+                  <td>11:30 – 20:30</td>
+                </tr>
+                <tr data-day="4">
+                  <td data-i18n="day.thursday">Donderdag</td>
+                  <td>11:30 – 20:30</td>
+                </tr>
+                <tr data-day="5">
+                  <td data-i18n="day.friday">Vrijdag</td>
+                  <td>11:30 – 20:30</td>
+                </tr>
+                <tr data-day="6">
+                  <td data-i18n="day.saturday">Zaterdag</td>
+                  <td>11:30 – 20:30</td>
+                </tr>
+                <tr data-day="0">
+                  <td data-i18n="day.sunday">Zondag</td>
+                  <td>12:30 – 20:30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section" id="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2464.5!2d4.3605!3d51.8614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c434b0e8d3f1e5%3A0x8f9b0b9b9b9b9b9b!2sOude%20Wal%2047%2C%203193%20EM%20Hoogvliet%2C%20Netherlands!5e0!3m2!1snl!2snl!4v1700000000000!5m2!1snl!2snl"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Sun Sien locatie op Google Maps">
+      </iframe>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2024/03/logo-voetbalclub.png2_-220x101.png" alt="Sun Sien"
+            class="footer-logo">
+          <p>
+            <span data-i18n="brand.lineOne">Surinaams • Chinees • Caribisch</span><br>
+            <span data-i18n="brand.lineTwo">Afhaalcentrum in Hoogvliet</span>
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="menu.html" data-i18n="nav.menu">Menu</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact</a>
+          <a href="https://allergenen.sho-horeca.nl/kaart/sunsien" target="_blank" rel="noreferrer"
+            data-i18n="common.allergens">Allergenen</a>
+        </div>
+        <div class="footer-contact">
+          <a href="tel:0104382505">010 438 2505</a>
+          <a href="mailto:info@sunsien.nl">info@sunsien.nl</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Oude+Wal+47+3193+EM+Hoogvliet+Rotterdam" target="_blank" rel="noreferrer">Oude Wal 47, 3193 EM Hoogvliet Rotterdam</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 Sun Sien Afhaalcentrum – Alle rechten voorbehouden</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Terug naar boven"
+    data-i18n-aria-label="common.scrollTop">↑</button>
+
+  <script src="site-copy.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

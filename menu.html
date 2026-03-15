@@ -1,0 +1,2559 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Menu – Sun Sien Afhaalcentrum</title>
+  <meta name="description"
+    content="Bekijk het Sun Sien menu, gesorteerd van laag naar hoog, met een eigen pagina voor elk gerecht.">
+  <meta name="theme-color" content="#CA1414" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="https://www.sunsien.nl/wp-content/uploads/2022/09/cropped-SunSien-colored@1x-32x32.png">
+</head>
+
+<body class="menu-page">
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" id="logo">
+        <img src="https://www.sunsien.nl/wp-content/uploads/2024/03/logo-voetbalclub.png2_-220x101.png"
+          alt="Sun Sien Logo" class="logo-img">
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">Over Ons</a>
+        <a href="menu.html" class="active" data-i18n="nav.menu">Menu</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="tel:0104382505" class="nav-call-link" data-i18n="nav.callOrder">Bel &amp; Bestel</a>
+        <p class="nav-call-note" data-i18n="common.callWaitNote"></p>
+      </nav>
+
+      <div class="header-actions">
+        <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch language to English">
+          <span class="language-toggle-icon" aria-hidden="true">🌐</span>
+          <span class="language-toggle-label" id="language-toggle-label">EN</span>
+        </button>
+        <a href="tel:0104382505" class="btn-call" id="nav-call-btn">
+          <span class="call-icon">📞</span>
+          <span class="call-text" data-i18n="common.callShort">Bellen</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Menu openen" data-i18n-aria-label="common.openMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="menu-hero">
+    <div class="menu-hero-shell">
+      <div class="menu-hero-copy">
+        <span class="menu-hero-kicker" data-i18n="menu.heroLabel">Menu</span>
+        <h1 data-i18n="menuPage.title">Onze Menukaart</h1>
+        <p data-i18n="menu.heroSubtitle">Blader snel door categorieen, check prijzen en open een gerecht voor details.
+        </p>
+        <div class="menu-hero-stats">
+          <div class="menu-hero-stat">
+            <span class="menu-hero-stat-value" id="menu-stat-categories">15</span>
+            <span class="menu-hero-stat-label" data-i18n="menu.statsCategories">categorieen</span>
+          </div>
+          <div class="menu-hero-stat">
+            <span class="menu-hero-stat-value" id="menu-stat-items">100+</span>
+            <span class="menu-hero-stat-label" data-i18n="menu.statsDishes">keuzes</span>
+          </div>
+        </div>
+        <div class="menu-hero-actions">
+          <a href="https://www.sunsien.nl/wp-content/uploads/2026/03/1-Menukaart-2026.pdf"
+            class="btn btn-primary btn-sm" target="_blank" rel="noreferrer" data-i18n="common.menuPdf">📋 Menu (PDF)</a>
+          <a href="https://allergenen.sho-horeca.nl/kaart/sunsien" class="btn btn-glass btn-sm" target="_blank"
+            rel="noreferrer" data-i18n="common.allergens">⚕️ Allergenen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Apple-style Category Lineup ===== -->
+  <section class="menu-lineup">
+    <div class="menu-lineup-header">
+      <h2 data-i18n="menu.lineupHeading">Ontdek de categorieen.</h2>
+      <a href="#cat-combis" class="menu-lineup-link" data-i18n="menu.lineupLink">Bekijk alle categorieen ›</a>
+    </div>
+    <div class="menu-lineup-cards">
+
+      <article class="lineup-card" data-category-target="cat-combis">
+        <div class="lineup-card-img">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/COMBI-1-4.jpg" alt="Combi's" loading="lazy">
+        </div>
+        <h3 data-i18n="category.combis">Combi's</h3>
+        <p>Voordelige combinaties</p>
+      </article>
+
+      <article class="lineup-card" data-category-target="cat-eenpersoons">
+        <div class="lineup-card-img">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/117-moksie-metie-1.jpg" alt="Eenpersoons"
+            loading="lazy">
+        </div>
+        <h3 data-i18n="category.eenpersoons">Eenpersoons</h3>
+        <p>Eenpersoons gerechten</p>
+      </article>
+
+      <article class="lineup-card" data-category-target="cat-broodjes">
+        <div class="lineup-card-img">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/45-broodje-kerrie-kip-tif.jpg" alt="Broodjes"
+            loading="lazy">
+        </div>
+        <h3 data-i18n="category.broodjes">Broodjes</h3>
+        <p>Belegde broodjes</p>
+      </article>
+
+      <article class="lineup-card" data-category-target="cat-specialiteiten">
+        <div class="lineup-card-img">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/3-stokjes-sate-150x150.jpg" alt="Specialiteiten"
+            loading="lazy">
+        </div>
+        <h3 data-i18n="category.specialiteiten">Specialiteiten</h3>
+        <p>Onze specials</p>
+      </article>
+
+      <article class="lineup-card" data-category-target="cat-nieuwe">
+        <div class="lineup-card-img lineup-card-img--placeholder">
+          <span>Nieuw</span>
+        </div>
+        <h3 data-i18n="category.nieuwe">Nieuw</h3>
+        <p>Nieuwe gerechten</p>
+      </article>
+
+      <article class="lineup-card" data-category-target="cat-surinaams">
+        <div class="lineup-card-img">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2022/09/Saoto-soep.png" alt="Surinaams" loading="lazy">
+        </div>
+        <h3 data-i18n="category.surinaams">Surinaams</h3>
+        <p>Surinaamse gerechten</p>
+      </article>
+
+      <article class="lineup-card" data-category-target="cat-caribisch">
+        <div class="lineup-card-img">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/140-spare-ribs-150x150.jpg" alt="Caribisch"
+            loading="lazy">
+        </div>
+        <h3 data-i18n="category.caribisch">Caribisch</h3>
+        <p>Caribische gerechten</p>
+      </article>
+
+      <article class="lineup-card" data-category-target="cat-vlees">
+        <div class="lineup-card-img">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/150-babi-pangang.jpg" alt="Vlees" loading="lazy">
+        </div>
+        <h3 data-i18n="category.vlees">Vlees</h3>
+        <p>Vlees gerechten</p>
+      </article>
+
+      <article class="lineup-card" data-category-target="cat-kip">
+        <div class="lineup-card-img">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/160-kipfilet-met-champ-150x150.jpg" alt="Kip"
+            loading="lazy">
+        </div>
+        <h3 data-i18n="category.kip">Kip</h3>
+        <p>Kip gerechten</p>
+      </article>
+
+      <article class="lineup-card" data-category-target="cat-ei">
+        <div class="lineup-card-img">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2022/11/P5230172-150x150.jpg" alt="Ei" loading="lazy">
+        </div>
+        <h3 data-i18n="category.ei">Ei</h3>
+        <p>Ei gerechten</p>
+      </article>
+
+      <article class="lineup-card" data-category-target="cat-groente">
+        <div class="lineup-card-img lineup-card-img--placeholder">
+          <span>Groente</span>
+        </div>
+        <h3 data-i18n="category.groente">Groente</h3>
+        <p>Groente gerechten</p>
+      </article>
+
+      <article class="lineup-card" data-category-target="cat-nasi">
+        <div class="lineup-card-img">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/192-nasi-goreng-kipsate-150x150.jpg" alt="Nasi"
+            loading="lazy">
+        </div>
+        <h3 data-i18n="category.nasi">Nasi</h3>
+        <p>Chinese nasi gerechten</p>
+      </article>
+
+      <article class="lineup-card" data-category-target="cat-bami">
+        <div class="lineup-card-img">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/200-bami-goreng-150x150.jpg" alt="Bami"
+            loading="lazy">
+        </div>
+        <h3 data-i18n="category.bami">Bami</h3>
+        <p>Chinese bami gerechten</p>
+      </article>
+
+      <article class="lineup-card" data-category-target="cat-mihoen">
+        <div class="lineup-card-img">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/210-mihoen-varken-150x150.jpg" alt="Mihoen"
+            loading="lazy">
+        </div>
+        <h3 data-i18n="category.mihoen">Mihoen</h3>
+        <p>Mihoen gerechten</p>
+      </article>
+
+      <article class="lineup-card" data-category-target="cat-snacks">
+        <div class="lineup-card-img lineup-card-img--placeholder">
+          <span>Snacks</span>
+        </div>
+        <h3 data-i18n="category.snacks">Snacks</h3>
+        <p>Snacks &amp; bijgerechten</p>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="category-nav-wrapper" id="category-nav-wrapper">
+    <nav class="category-nav" id="category-nav">
+      <a href="#cat-combis" class="cat-link active" data-cat="cat-combis" data-i18n="category.combis">Combi&#39;s</a>
+      <a href="#cat-eenpersoons" class="cat-link" data-cat="cat-eenpersoons"
+        data-i18n="category.eenpersoons">Eenpersoons</a>
+      <a href="#cat-broodjes" class="cat-link" data-cat="cat-broodjes" data-i18n="category.broodjes">Broodjes</a>
+      <a href="#cat-specialiteiten" class="cat-link" data-cat="cat-specialiteiten"
+        data-i18n="category.specialiteiten">Specialiteiten</a>
+      <a href="#cat-nieuwe" class="cat-link" data-cat="cat-nieuwe" data-i18n="category.nieuwe">Nieuw</a>
+      <a href="#cat-surinaams" class="cat-link" data-cat="cat-surinaams" data-i18n="category.surinaams">Surinaams</a>
+      <a href="#cat-caribisch" class="cat-link" data-cat="cat-caribisch" data-i18n="category.caribisch">Caribisch</a>
+      <a href="#cat-vlees" class="cat-link" data-cat="cat-vlees" data-i18n="category.vlees">Vlees</a>
+      <a href="#cat-kip" class="cat-link" data-cat="cat-kip" data-i18n="category.kip">Kip</a>
+      <a href="#cat-ei" class="cat-link" data-cat="cat-ei" data-i18n="category.ei">Ei</a>
+      <a href="#cat-groente" class="cat-link" data-cat="cat-groente" data-i18n="category.groente">Groente</a>
+      <a href="#cat-nasi" class="cat-link" data-cat="cat-nasi" data-i18n="category.nasi">Nasi</a>
+      <a href="#cat-bami" class="cat-link" data-cat="cat-bami" data-i18n="category.bami">Bami</a>
+      <a href="#cat-mihoen" class="cat-link" data-cat="cat-mihoen" data-i18n="category.mihoen">Mihoen</a>
+      <a href="#cat-snacks" class="cat-link" data-cat="cat-snacks" data-i18n="category.snacks">Snacks</a>
+    </nav>
+  </div>
+
+  <main class="menu-content" id="menu-content">
+
+    <section class="menu-category" id="cat-combis">
+      <div class="cat-header">
+        <h2 data-i18n="category.combis">Voordeel Combi&#39;s</h2>
+      </div>
+
+      <div class="menu-items">
+
+        <a class="menu-item menu-item-link" href="items/001-combi-1.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/COMBI-1-4.jpg" alt="Combi 1" loading="lazy">
+          </div>
+          <span class="mi-num">1</span>
+          <div class="mi-info">
+            <span class="mi-name">Combi 1</span>
+            <span class="mi-desc">1 surinaams belegd broodje naar keuze t.w.v. €4,50, 1 st. Sun Sien fried chicken en 1
+              blikje limonade t.w.v. €2,30</span>
+          </div>
+          <span class="mi-price">€9,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/002-combi-2.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/COMBI-2-1.jpg" alt="Combi 2" loading="lazy">
+          </div>
+          <span class="mi-num">2</span>
+          <div class="mi-info">
+            <span class="mi-name">Combi 2</span>
+            <span class="mi-desc">1 zelfgemaakte loempia uit eigen keuken, 1 st. Sun Sien fried chicken en 1 blikje
+              limonade t.w.v. €2,30</span>
+          </div>
+          <span class="mi-price">€9,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/003-combi-3.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/COMBI-3-2.jpg" alt="Combi 3" loading="lazy">
+          </div>
+          <span class="mi-num">3</span>
+          <div class="mi-info">
+            <span class="mi-name">Combi 3</span>
+            <span class="mi-desc">6 st. hotwings, patat met frietsaus en 1 blikje limonade t.w.v. €2,30</span>
+          </div>
+          <span class="mi-price">€12,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/004-combi-4.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/COMBI-4.jpg" alt="Combi 4" loading="lazy">
+          </div>
+          <span class="mi-num">4</span>
+          <div class="mi-info">
+            <span class="mi-name">Combi 4</span>
+            <span class="mi-desc">1 halve kip gefrituurd, patat met frietsaus en 1 blikje limonade t.w.v. €2,25</span>
+          </div>
+          <span class="mi-price">€13,25</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/005-combi-5.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/COMBI-5.jpg" alt="Combi 5" loading="lazy">
+          </div>
+          <span class="mi-num">5</span>
+          <div class="mi-info">
+            <span class="mi-name">Combi 5</span>
+            <span class="mi-desc">3 stokjes saté met pindasaus, patat en 1 blikje limonade t.w.v. €2,30</span>
+          </div>
+          <span class="mi-price">€13,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/006-combi-6.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/COMBI-6.jpg" alt="Combi 6" loading="lazy">
+          </div>
+          <span class="mi-num">6</span>
+          <div class="mi-info">
+            <span class="mi-name">Combi 6</span>
+            <span class="mi-desc">2 st. Sun Sien fried chicken, patat met frietsaus en 1 blikje limonade t.w.v.
+              €2,30</span>
+          </div>
+          <span class="mi-price">€12,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="menu-category" id="cat-eenpersoons">
+      <div class="cat-header">
+        <h2 data-i18n="category.eenpersoons">Eenpersoons Gerechten</h2>
+      </div>
+      <div class="cat-note">Keuze uit rijst, surinaamse nasi of surinaamse bami</div>
+      <div class="menu-items">
+
+        <a class="menu-item menu-item-link" href="items/010-moksie-metie.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/117-moksie-metie-1.jpg" alt="Moksie Metie"
+              loading="lazy">
+          </div>
+          <span class="mi-num">10</span>
+          <div class="mi-info">
+            <span class="mi-name">Moksie Metie</span>
+            <span class="mi-desc">Keuze uit rijst, surinaamse nasi of surinaamse bami</span>
+          </div>
+          <span class="mi-price">€10,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/011-geroosterde-kip.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">11</span>
+          <div class="mi-info">
+            <span class="mi-name">Geroosterde Kip</span>
+            <span class="mi-desc">Keuze uit rijst, surinaamse nasi of surinaamse bami</span>
+          </div>
+          <span class="mi-price">€10,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/012-kerriekipfilet.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/12-kerrie-kipfilet.jpg" alt="Kerriekipfilet"
+              loading="lazy">
+          </div>
+          <span class="mi-num">12</span>
+          <div class="mi-info">
+            <span class="mi-name">Kerriekipfilet</span>
+            <span class="mi-desc">Keuze uit rijst, surinaamse nasi of surinaamse bami</span>
+          </div>
+          <span class="mi-price">€10,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/013-babi-pangang.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/150-babi-pangang.jpg" alt="Babi Pangang"
+              loading="lazy">
+          </div>
+          <span class="mi-num">13</span>
+          <div class="mi-info">
+            <span class="mi-name">Babi Pangang</span>
+            <span class="mi-desc">Keuze uit rijst, surinaamse nasi of surinaamse bami</span>
+          </div>
+          <span class="mi-price">€10,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/014-spek.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">14</span>
+          <div class="mi-info">
+            <span class="mi-name">Spek</span>
+            <span class="mi-desc">Keuze uit rijst, surinaamse nasi of surinaamse bami</span>
+          </div>
+          <span class="mi-price">€10,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/015-tsa-saw.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/120-Tsa-saw-150x150.jpg" alt="Tsa Saw"
+              loading="lazy">
+          </div>
+          <span class="mi-num">15</span>
+          <div class="mi-info">
+            <span class="mi-name">Tsa Saw</span>
+            <span class="mi-desc">Keuze uit rijst, surinaamse nasi of surinaamse bami</span>
+          </div>
+          <span class="mi-price">€10,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/016-kipfilet-pikant.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">16</span>
+          <div class="mi-info">
+            <span class="mi-name">Kipfilet Pikant</span>
+            <span class="mi-desc">Keuze uit rijst, surinaamse nasi of surinaamse bami</span>
+          </div>
+          <span class="mi-price">€10,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/017-gestoofd-varkensvlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">17</span>
+          <div class="mi-info">
+            <span class="mi-name">Gestoofd Varkensvlees</span>
+            <span class="mi-desc">Keuze uit rijst, surinaamse nasi of surinaamse bami</span>
+          </div>
+          <span class="mi-price">€10,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/018-pom.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/122-pom.jpg" alt="Pom" loading="lazy">
+          </div>
+          <span class="mi-num">18</span>
+          <div class="mi-info">
+            <span class="mi-name">Pom</span>
+            <span class="mi-desc">Keuze uit rijst, surinaamse nasi of surinaamse bami</span>
+          </div>
+          <span class="mi-price">€10,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/019-foe-yung-hai.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">19</span>
+          <div class="mi-info">
+            <span class="mi-name">Foe Yung Hai</span>
+            <span class="mi-desc">Kip of varkensvlees. Keuze uit rijst, surinaamse nasi of surinaamse bami</span>
+          </div>
+          <span class="mi-price">€10,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="menu-category" id="cat-broodjes">
+      <div class="cat-header">
+        <h2 data-i18n="category.broodjes">Belegde Broodjes</h2>
+      </div>
+
+      <div class="menu-items">
+
+        <a class="menu-item menu-item-link" href="items/040-broodje-zoutvlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">40</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Zoutvlees</span>
+
+          </div>
+          <span class="mi-price">€5,20</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/041-broodje-bakkeljauw.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">41</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Bakkeljauw</span>
+
+          </div>
+          <span class="mi-price">€5,20</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/042-broodje-tsa-saw.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/42-broodje-tsasaw-png.jpg" alt="Broodje Tsa Saw"
+              loading="lazy">
+          </div>
+          <span class="mi-num">42</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Tsa Saw</span>
+
+          </div>
+          <span class="mi-price">€4,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/043-broodje-fa-chong.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">43</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Fa Chong</span>
+
+          </div>
+          <span class="mi-price">€4,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/044-broodje-warm-vlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">44</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Warm Vlees</span>
+
+          </div>
+          <span class="mi-price">€4,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/045-broodje-kerrie-kip.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/45-broodje-kerrie-kip-tif.jpg"
+              alt="Broodje Kerrie Kip" loading="lazy">
+          </div>
+          <span class="mi-num">45</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Kerrie Kip</span>
+
+          </div>
+          <span class="mi-price">€4,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/046-broodje-pom.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">46</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Pom</span>
+
+          </div>
+          <span class="mi-price">€5,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/047-broodje-garnalen.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">47</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Garnalen</span>
+
+          </div>
+          <span class="mi-price">€5,20</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/048-broodje-spek.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">48</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Spek</span>
+
+          </div>
+          <span class="mi-price">€4,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/049-broodje-kerrie-ei.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">49</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Kerrie Ei</span>
+
+          </div>
+          <span class="mi-price">€4,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/050-broodje-steak.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">50</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Steak</span>
+
+          </div>
+          <span class="mi-price">€5,20</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/051-gevulde-bara.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/51-bara.jpg" alt="Gevulde Bara" loading="lazy">
+          </div>
+          <span class="mi-num">51</span>
+          <div class="mi-info">
+            <span class="mi-name">Gevulde Bara</span>
+
+          </div>
+          <span class="mi-price">vanaf €6,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/052-broodje-kotelet.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">52</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Kotelet</span>
+
+          </div>
+          <span class="mi-price">€6,20</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/053-broodje-vegetarisch.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">53</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Vegetarisch</span>
+
+          </div>
+          <span class="mi-price">€4,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/054-broodje-gevangenis.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">54</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Gevangenis</span>
+            <span class="mi-desc">Spiegelei met geroosterde kip</span>
+          </div>
+          <span class="mi-price">€6,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/055-broodje-geroosterde-kip.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">55</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Geroosterde Kip</span>
+
+          </div>
+          <span class="mi-price">€5,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/056-broodje-kipfilet-pikant.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">56</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Kipfilet Pikant</span>
+
+          </div>
+          <span class="mi-price">€4,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/057-broodje-dynamite.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">57</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Dynamite</span>
+            <span class="mi-desc">Mix van kerrie kip en tsa saw</span>
+          </div>
+          <span class="mi-price">€5,20</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/058-broodje-foe-young-hai.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">58</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Foe Young Hai</span>
+            <span class="mi-desc">Omelet met diverse groenten</span>
+          </div>
+          <span class="mi-price">€4,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/059-broodje-sate.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">59</span>
+          <div class="mi-info">
+            <span class="mi-name">Broodje Saté (kip)</span>
+
+          </div>
+          <span class="mi-price">€6,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="menu-category" id="cat-specialiteiten">
+      <div class="cat-header">
+        <h2 data-i18n="category.specialiteiten">Specialiteiten</h2>
+      </div>
+
+      <div class="menu-items">
+
+        <a class="menu-item menu-item-link" href="items/060-sate.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/3-stokjes-sate-150x150.jpg" alt="Saté"
+              loading="lazy">
+          </div>
+          <span class="mi-num">60</span>
+          <div class="mi-info">
+            <span class="mi-name">Saté</span>
+            <span class="mi-desc">3 stokjes</span>
+          </div>
+          <span class="mi-price">€7,80</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/061-telo-met-bakkeljauw.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/11/61-Telo--150x150.png" alt="Telo met Bakkeljauw"
+              loading="lazy">
+          </div>
+          <span class="mi-num">61</span>
+          <div class="mi-info">
+            <span class="mi-name">Telo met Bakkeljauw</span>
+
+          </div>
+          <span class="mi-price">€7,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/062-loempia-uit-eigen-keuken.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/11/loempia-150x150.png"
+              alt="Loempia uit Eigen Keuken" loading="lazy">
+          </div>
+          <span class="mi-num">62</span>
+          <div class="mi-info">
+            <span class="mi-name">Loempia uit Eigen Keuken</span>
+
+          </div>
+          <span class="mi-price">€4,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/063-pietjel.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">63</span>
+          <div class="mi-info">
+            <span class="mi-name">Pietjel</span>
+
+          </div>
+          <span class="mi-price">€4,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/064-bakka-bana.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/11/gebakken-banaan-150x150.png" alt="Bakka Bana"
+              loading="lazy">
+          </div>
+          <span class="mi-num">64</span>
+          <div class="mi-info">
+            <span class="mi-name">Bakka Bana</span>
+            <span class="mi-desc">Gebakken banaan</span>
+          </div>
+          <span class="mi-price">€2,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/065-surinaamse-bloedworst.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/65-66-worst.jpg" alt="Surinaamse Bloedworst"
+              loading="lazy">
+          </div>
+          <span class="mi-num">65</span>
+          <div class="mi-info">
+            <span class="mi-name">Surinaamse Bloedworst</span>
+
+          </div>
+          <span class="mi-price">€3,30</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/066-surinaamse-vleesworst.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/65-66-worst.jpg" alt="Surinaamse Vleesworst"
+              loading="lazy">
+          </div>
+          <span class="mi-num">66</span>
+          <div class="mi-info">
+            <span class="mi-name">Surinaamse Vleesworst</span>
+
+          </div>
+          <span class="mi-price">€3,70</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/067-fa-chong.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">67</span>
+          <div class="mi-info">
+            <span class="mi-name">Fa Chong</span>
+
+          </div>
+          <span class="mi-price">€4,80</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/068-bara.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/68-bara-150x150.jpg" alt="Bara" loading="lazy">
+          </div>
+          <span class="mi-num">68</span>
+          <div class="mi-info">
+            <span class="mi-name">Bara</span>
+
+          </div>
+          <span class="mi-price">€3,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/070-frita.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/70-frita-150x150.jpg" alt="Frita"
+              loading="lazy">
+          </div>
+          <span class="mi-num">70</span>
+          <div class="mi-info">
+            <span class="mi-name">Frita</span>
+
+          </div>
+          <span class="mi-price">€2,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/071-rotirol.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">71</span>
+          <div class="mi-info">
+            <span class="mi-name">Rotirol</span>
+            <span class="mi-desc">Opgerolde pannenkoek gevuld met kipfilet, aardappel, kouseband en ei</span>
+          </div>
+          <span class="mi-price">€10,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/072-sun-sien-fried-chicken.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2023/03/fried-chicken-150x150.png"
+              alt="Sun Sien Fried Chicken" loading="lazy">
+          </div>
+          <span class="mi-num">72</span>
+          <div class="mi-info">
+            <span class="mi-name">Sun Sien Fried Chicken</span>
+            <span class="mi-desc">1 stuk</span>
+          </div>
+          <span class="mi-price">€3,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/073-sun-sien-fried-chicken.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2023/03/fried-chicken-150x150.png"
+              alt="Sun Sien Fried Chicken (5 st.)" loading="lazy">
+          </div>
+          <span class="mi-num">73</span>
+          <div class="mi-info">
+            <span class="mi-name">Sun Sien Fried Chicken (5 st.)</span>
+            <span class="mi-desc">5 stuks</span>
+          </div>
+          <span class="mi-price">€13,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/074-chicken-combo.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2023/03/Chicken-combo-150x150.png" alt="Chicken Combo"
+              loading="lazy">
+          </div>
+          <span class="mi-num">74</span>
+          <div class="mi-info">
+            <span class="mi-name">Chicken Combo</span>
+            <span class="mi-desc">2 stukjes Fried Chicken, patat en frietsaus</span>
+          </div>
+          <span class="mi-price">€10,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/076-hotwings.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">76</span>
+          <div class="mi-info">
+            <span class="mi-name">HotWings</span>
+            <span class="mi-desc">Per portie van 3 stuks</span>
+          </div>
+          <span class="mi-price">€3,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/078-grote-pikante-garnalen.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/78pikante-garnalen-150x150.jpg"
+              alt="Grote Pikante Garnalen" loading="lazy">
+          </div>
+          <span class="mi-num">78</span>
+          <div class="mi-info">
+            <span class="mi-name">Grote Pikante Garnalen</span>
+
+          </div>
+          <span class="mi-price">€19,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="menu-category" id="cat-nieuwe">
+      <div class="cat-header">
+        <h2 data-i18n="category.nieuwe">Nieuwe Gerechten</h2>
+      </div>
+
+      <div class="menu-items">
+
+        <a class="menu-item menu-item-link" href="items/086-kung-po-kai.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">86</span>
+          <div class="mi-info">
+            <span class="mi-name">Kung Po Kai</span>
+            <span class="mi-desc">Kipfilet met speciale pittigsaus en cashewnoten</span>
+          </div>
+          <span class="mi-price">€17,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/087-kung-po-varken.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">87</span>
+          <div class="mi-info">
+            <span class="mi-name">Kung Po Varken</span>
+            <span class="mi-desc">Varkensvlees met speciale pittigsaus en cashewnoten</span>
+          </div>
+          <span class="mi-price">€17,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/088-kung-po-rundvlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">88</span>
+          <div class="mi-info">
+            <span class="mi-name">Kung Po Rundvlees</span>
+            <span class="mi-desc">Rundvlees met pittigsaus en cashewnoten</span>
+          </div>
+          <span class="mi-price">€19,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/089-kung-po-garnalen.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">89</span>
+          <div class="mi-info">
+            <span class="mi-name">Kung Po Garnalen</span>
+            <span class="mi-desc">Garnalen met pittigsaus en cashewnoten</span>
+          </div>
+          <span class="mi-price">€19,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/090-tausi-kai.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">90</span>
+          <div class="mi-info">
+            <span class="mi-name">Tausi Kai</span>
+            <span class="mi-desc">Zwarte bonensaus met kipfilet</span>
+          </div>
+          <span class="mi-price">€17,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/091-tausi-varkensvlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">91</span>
+          <div class="mi-info">
+            <span class="mi-name">Tausi Varkensvlees</span>
+            <span class="mi-desc">Zwarte bonensaus met varkensvlees</span>
+          </div>
+          <span class="mi-price">€17,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/092-tausi-rundvlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">92</span>
+          <div class="mi-info">
+            <span class="mi-name">Tausi Rundvlees</span>
+            <span class="mi-desc">Zwarte bonensaus met rundvlees</span>
+          </div>
+          <span class="mi-price">€19,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/093-tausi-garnalen.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">93</span>
+          <div class="mi-info">
+            <span class="mi-name">Tausi Garnalen</span>
+            <span class="mi-desc">Zwarte bonensaus met garnalen</span>
+          </div>
+          <span class="mi-price">€19,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/094-zwarte-pepersaus-kipfilet.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">94</span>
+          <div class="mi-info">
+            <span class="mi-name">Zwarte Pepersaus Kipfilet</span>
+
+          </div>
+          <span class="mi-price">€17,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/095-zwarte-pepersaus-varkensvlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">95</span>
+          <div class="mi-info">
+            <span class="mi-name">Zwarte Pepersaus Varkensvlees</span>
+
+          </div>
+          <span class="mi-price">€17,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/096-zwarte-pepersaus-rundvlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">96</span>
+          <div class="mi-info">
+            <span class="mi-name">Zwarte Pepersaus Rundvlees</span>
+
+          </div>
+          <span class="mi-price">€19,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/097-zwarte-pepersaus-garnalen.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">97</span>
+          <div class="mi-info">
+            <span class="mi-name">Zwarte Pepersaus Garnalen</span>
+
+          </div>
+          <span class="mi-price">€19,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/098-chieuw-jiem-kai.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">98</span>
+          <div class="mi-info">
+            <span class="mi-name">Chieuw Jiem Kai</span>
+            <span class="mi-desc">Droog gebakken kipfilet met speciale kruiden</span>
+          </div>
+          <span class="mi-price">€17,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/099-chieuw-jiem-varken.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">99</span>
+          <div class="mi-info">
+            <span class="mi-name">Chieuw Jiem Varken</span>
+            <span class="mi-desc">Droog gebakken varkensvlees met speciale kruiden</span>
+          </div>
+          <span class="mi-price">€17,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/100-chieuw-jiem-rundvlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">100</span>
+          <div class="mi-info">
+            <span class="mi-name">Chieuw Jiem Rundvlees</span>
+            <span class="mi-desc">Droog gebakken rundvlees met speciale kruiden</span>
+          </div>
+          <span class="mi-price">€19,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/101-chieuw-jiem-garnalen.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">101</span>
+          <div class="mi-info">
+            <span class="mi-name">Chieuw Jiem Garnalen</span>
+            <span class="mi-desc">Droog gebakken garnalen met speciale kruiden</span>
+          </div>
+          <span class="mi-price">€19,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="menu-category" id="cat-surinaams">
+      <div class="cat-header">
+        <h2 data-i18n="category.surinaams">Surinaamse Gerechten</h2>
+      </div>
+      <div class="cat-note">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</div>
+      <div class="menu-items">
+
+        <a class="menu-item menu-item-link" href="items/110-saoto-soep.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/09/Saoto-soep.png" alt="Saoto Soep" loading="lazy">
+          </div>
+          <span class="mi-num">110</span>
+          <div class="mi-info">
+            <span class="mi-name">Saoto Soep</span>
+            <span class="mi-desc">Pittige soep met taugé en kip · optie met rijst +€1,00</span>
+          </div>
+          <span class="mi-price">€7,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/111-wonton-soep.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">111</span>
+          <div class="mi-info">
+            <span class="mi-name">Wonton Soep</span>
+            <span class="mi-desc">Dumplings van garnalen en varkensvlees met bami</span>
+          </div>
+          <span class="mi-price">€10,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/112-min-soep.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/112-min-soep.jpg" alt="Min Soep" loading="lazy">
+          </div>
+          <span class="mi-num">112</span>
+          <div class="mi-info">
+            <span class="mi-name">Min Soep</span>
+            <span class="mi-desc">Bamisoep met moksie vlees</span>
+          </div>
+          <span class="mi-price">€13,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/113-roti-kip.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/113-roti-kipkopiekopie.jpg" alt="Roti Kip"
+              loading="lazy">
+          </div>
+          <span class="mi-num">113</span>
+          <div class="mi-info">
+            <span class="mi-name">Roti Kip</span>
+            <span class="mi-desc">Pannenkoek met kip (met bot), aardappel, kouseband en ei</span>
+          </div>
+          <span class="mi-price">€13,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/114-roti-kipfilet.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">114</span>
+          <div class="mi-info">
+            <span class="mi-name">Roti Kipfilet</span>
+            <span class="mi-desc">Pannenkoek met kerrie kipfilet, aardappel, kouseband en ei</span>
+          </div>
+          <span class="mi-price">€14,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/115-roti-varkensvlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">115</span>
+          <div class="mi-info">
+            <span class="mi-name">Roti Varkensvlees</span>
+            <span class="mi-desc">Pannenkoek met varkensvlees (tsa sieuw), aardappel, kouseband en ei</span>
+          </div>
+          <span class="mi-price">€14,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/116-roti-rundvlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">116</span>
+          <div class="mi-info">
+            <span class="mi-name">Roti Rundvlees</span>
+            <span class="mi-desc">Pannenkoek met rundvlees, aardappel, kouseband en ei</span>
+          </div>
+          <span class="mi-price">€16,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/117-moksie-metie.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/117-moksie-metie-1.jpg" alt="Moksie Metie"
+              loading="lazy">
+          </div>
+          <span class="mi-num">117</span>
+          <div class="mi-info">
+            <span class="mi-name">Moksie Metie</span>
+            <span class="mi-desc">Geroosterd mager varkensvlees, krokante spek, geroosterde kip en fachong met saus en
+              groenten. Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€15,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/118-gestoofd-varkensvlees-ketjapsaus.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/118-gestoofd-varkensvlees-1-1024x1024.jpg"
+              alt="Gestoofd Varkensvlees Ketjapsaus" loading="lazy">
+          </div>
+          <span class="mi-num">118</span>
+          <div class="mi-info">
+            <span class="mi-name">Gestoofd Varkensvlees Ketjapsaus</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€15,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/119-gestoofd-varkensvlees-met-gezouten-amsoi.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/119-gestoofd-varkensvleesamsoi-1-1024x1024.jpg"
+              alt="Gestoofd Varkensvlees met Gezouten Amsoi" loading="lazy">
+          </div>
+          <span class="mi-num">119</span>
+          <div class="mi-info">
+            <span class="mi-name">Gestoofd Varkensvlees met Gezouten Amsoi</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€17,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/120-tsa-saw.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/120-Tsa-saw.jpg" alt="Tsa Saw" loading="lazy">
+          </div>
+          <span class="mi-num">120</span>
+          <div class="mi-info">
+            <span class="mi-name">Tsa Saw</span>
+            <span class="mi-desc">Geroosterd mager varkensvlees. Standaard met witte rijst. Nasi/bami i.p.v. rijst
+              +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€15,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/121-kerrie-kip.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/121-kerrie-kip-1-1024x1024.jpg" alt="Kerrie Kip"
+              loading="lazy">
+          </div>
+          <span class="mi-num">121</span>
+          <div class="mi-info">
+            <span class="mi-name">Kerrie Kip</span>
+            <span class="mi-desc">Kip met bot. Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen
+              +€4,00</span>
+          </div>
+          <span class="mi-price">€15,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/122-pom.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/122-pom.jpg" alt="Pom" loading="lazy">
+          </div>
+          <span class="mi-num">122</span>
+          <div class="mi-info">
+            <span class="mi-name">Pom</span>
+            <span class="mi-desc">Surinaamse ragout met kip en tomaten. Standaard met witte rijst. Nasi/bami i.p.v.
+              rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€16,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/123-losie-foroe.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/123-losie-foroe-1024x1024.jpg" alt="Losie Foroe"
+              loading="lazy">
+          </div>
+          <span class="mi-num">123</span>
+          <div class="mi-info">
+            <span class="mi-name">Losie Foroe</span>
+            <span class="mi-desc">In onze speciale oven geroosterde kip. Standaard met witte rijst. Nasi/bami i.p.v.
+              rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€15,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/124-tjauw-min.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/206-Tjauw-min-1024x1024.jpg" alt="Tjauw Min"
+              loading="lazy">
+          </div>
+          <span class="mi-num">124</span>
+          <div class="mi-info">
+            <span class="mi-name">Tjauw Min</span>
+            <span class="mi-desc">Surinaamse bami met moksie</span>
+          </div>
+          <span class="mi-price">€15,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/125-tjauw-fan.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/125-tjauwfan.jpg" alt="Tjauw Fan"
+              loading="lazy">
+          </div>
+          <span class="mi-num">125</span>
+          <div class="mi-info">
+            <span class="mi-name">Tjauw Fan</span>
+            <span class="mi-desc">Surinaamse nasi met moksie</span>
+          </div>
+          <span class="mi-price">€15,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/126-bakkeljauw-met-kouseband.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/126-bakkeljauw-1024x1024.jpg"
+              alt="Bakkeljauw met Kouseband" loading="lazy">
+          </div>
+          <span class="mi-num">126</span>
+          <div class="mi-info">
+            <span class="mi-name">Bakkeljauw met Kouseband</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€18,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/127-bruine-bonen-met-kip-of-varkensvlees.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/11/P5230150-1024x683.jpg"
+              alt="Bruine Bonen met Kip of Varkensvlees" loading="lazy">
+          </div>
+          <span class="mi-num">127</span>
+          <div class="mi-info">
+            <span class="mi-name">Bruine Bonen met Kip of Varkensvlees</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€16,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/128-bruine-bonen-met-zoutvlees-of-rundvlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">128</span>
+          <div class="mi-info">
+            <span class="mi-name">Bruine Bonen met Zoutvlees of Rundvlees</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€18,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/130-roti-vegetarisch.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">130</span>
+          <div class="mi-info">
+            <span class="mi-name">Roti Vegetarisch</span>
+
+          </div>
+          <span class="mi-price">€13,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="menu-category" id="cat-caribisch">
+      <div class="cat-header">
+        <h2 data-i18n="category.caribisch">Caribische Gerechten</h2>
+      </div>
+
+      <div class="menu-items">
+
+        <a class="menu-item menu-item-link" href="items/136-porkchop-ku-batata.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/136-porkchop-150x150.jpg"
+              alt="Porkchop ku Batata" loading="lazy">
+          </div>
+          <span class="mi-num">136</span>
+          <div class="mi-info">
+            <span class="mi-name">Porkchop ku Batata</span>
+
+          </div>
+          <span class="mi-price">€16,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/137-porkkotelet-ku-batata.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/137-porkkotelet-150x150.jpg"
+              alt="Porkkotelet ku Batata" loading="lazy">
+          </div>
+          <span class="mi-num">137</span>
+          <div class="mi-info">
+            <span class="mi-name">Porkkotelet ku Batata</span>
+
+          </div>
+          <span class="mi-price">€18,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/138-sate-ku-batata.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/138-sate-kubatata.jpg" alt="Saté ku Batata"
+              loading="lazy">
+          </div>
+          <span class="mi-num">138</span>
+          <div class="mi-info">
+            <span class="mi-name">Saté ku Batata</span>
+
+          </div>
+          <span class="mi-price">€14,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/139-nasi-gori-style-di-corsow.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/10/190A-nasigorengkip-150x150.png"
+              alt="Nasi Gori Style di Corsow" loading="lazy">
+          </div>
+          <span class="mi-num">139</span>
+          <div class="mi-info">
+            <span class="mi-name">Nasi Gori Style di Corsow</span>
+
+          </div>
+          <span class="mi-price">€15,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/140-caribische-spareribs.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/140-spare-ribs-150x150.jpg"
+              alt="Caribische Spareribs" loading="lazy">
+          </div>
+          <span class="mi-num">140</span>
+          <div class="mi-info">
+            <span class="mi-name">Caribische Spareribs</span>
+
+          </div>
+          <span class="mi-price">€16,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/141-batata-plain.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">141</span>
+          <div class="mi-info">
+            <span class="mi-name">Batata Plain</span>
+
+          </div>
+          <span class="mi-price">€9,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/142-chicken-cotlets-ku-batata.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/142-chicken-cotlets-150x150.jpg"
+              alt="Chicken Cotlets ku Batata" loading="lazy">
+          </div>
+          <span class="mi-num">142</span>
+          <div class="mi-info">
+            <span class="mi-name">Chicken Cotlets ku Batata</span>
+
+          </div>
+          <span class="mi-price">€18,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="menu-category" id="cat-vlees">
+      <div class="cat-header">
+        <h2 data-i18n="category.vlees">Vlees Gerechten</h2>
+      </div>
+      <div class="cat-note">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</div>
+      <div class="menu-items">
+
+        <a class="menu-item menu-item-link" href="items/150-babi-pangang.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/150-babi-pangang.jpg" alt="Babi Pangang"
+              loading="lazy">
+          </div>
+          <span class="mi-num">150</span>
+          <div class="mi-info">
+            <span class="mi-name">Babi Pangang</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€16,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/151-babi-pangang-met-ananas.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/151-babi-pangang-150x150.jpg"
+              alt="Babi Pangang met Ananas" loading="lazy">
+          </div>
+          <span class="mi-num">151</span>
+          <div class="mi-info">
+            <span class="mi-name">Babi Pangang met Ananas</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€17,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/152-varkenshaas-met-ananas.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/152-varkenshaas-150x150.jpg"
+              alt="Varkenshaas met Ananas" loading="lazy">
+          </div>
+          <span class="mi-num">152</span>
+          <div class="mi-info">
+            <span class="mi-name">Varkenshaas met Ananas</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€16,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/153-varkenshaas-met-champignons.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">153</span>
+          <div class="mi-info">
+            <span class="mi-name">Varkenshaas met Champignons</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€16,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/154-varkenshaas-in-pikante-saus.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/154-varkenshaas-pikante-saus-150x150.jpg"
+              alt="Varkenshaas in Pikante Saus" loading="lazy">
+          </div>
+          <span class="mi-num">154</span>
+          <div class="mi-info">
+            <span class="mi-name">Varkenshaas in Pikante Saus</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€17,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/155-koe-law-yuk.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/155-koe-law-yuk-150x150.jpg" alt="Koe Law Yuk"
+              loading="lazy">
+          </div>
+          <span class="mi-num">155</span>
+          <div class="mi-info">
+            <span class="mi-name">Koe Law Yuk</span>
+            <span class="mi-desc">Varkensvlees in een krokant jasje met zoetzure saus volgens Kantonees recept.
+              Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€18,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/156-babi-pangang-spek.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">156</span>
+          <div class="mi-info">
+            <span class="mi-name">Babi Pangang Spek</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€16,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="menu-category" id="cat-kip">
+      <div class="cat-header">
+        <h2 data-i18n="category.kip">Kip Gerechten</h2>
+      </div>
+      <div class="cat-note">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</div>
+      <div class="menu-items">
+
+        <a class="menu-item menu-item-link" href="items/160-kipfilet-met-champignons.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/160-kipfilet-met-champ-150x150.jpg"
+              alt="Kipfilet met Champignons" loading="lazy">
+          </div>
+          <span class="mi-num">160</span>
+          <div class="mi-info">
+            <span class="mi-name">Kipfilet met Champignons</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€16,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/161-kipfilet-met-ananas.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/161-ananas-kip-150x150.jpg"
+              alt="Kipfilet met Ananas" loading="lazy">
+          </div>
+          <span class="mi-num">161</span>
+          <div class="mi-info">
+            <span class="mi-name">Kipfilet met Ananas</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€16,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/162-kipfilet-in-kerriesaus.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/162-kipfiletkerriesaus-150x150.jpg"
+              alt="Kipfilet in Kerriesaus" loading="lazy">
+          </div>
+          <span class="mi-num">162</span>
+          <div class="mi-info">
+            <span class="mi-name">Kipfilet in Kerriesaus</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€17,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/163-kipfilet-in-pikante-saus.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">163</span>
+          <div class="mi-info">
+            <span class="mi-name">Kipfilet in Pikante Saus</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€17,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/164-koe-law-kai.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/164-Koe-law-kai-150x150.jpg" alt="Koe Law Kai"
+              loading="lazy">
+          </div>
+          <span class="mi-num">164</span>
+          <div class="mi-info">
+            <span class="mi-name">Koe Law Kai</span>
+            <span class="mi-desc">Krokant gebakken kipfilet in zoetzure saus volgens Kantonees recept. Standaard met
+              witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€18,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="menu-category" id="cat-ei">
+      <div class="cat-header">
+        <h2 data-i18n="category.ei">Ei Gerechten</h2>
+      </div>
+      <div class="cat-note">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</div>
+      <div class="menu-items">
+
+        <a class="menu-item menu-item-link" href="items/170-foe-young-hai-met-varkensvlees.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/11/P5230172-150x150.jpg"
+              alt="Foe Young Hai met Varkensvlees" loading="lazy">
+          </div>
+          <span class="mi-num">170</span>
+          <div class="mi-info">
+            <span class="mi-name">Foe Young Hai met Varkensvlees</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€15,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/171-foe-young-hai-met-kipfilet.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">171</span>
+          <div class="mi-info">
+            <span class="mi-name">Foe Young Hai met Kipfilet</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€15,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/172-foe-young-hai-met-rundvlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">172</span>
+          <div class="mi-info">
+            <span class="mi-name">Foe Young Hai met Rundvlees</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€18,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/173-foe-young-hai-met-garnalen.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">173</span>
+          <div class="mi-info">
+            <span class="mi-name">Foe Young Hai met Garnalen</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€18,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/174-foe-young-hai-vegetarisch.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">174</span>
+          <div class="mi-info">
+            <span class="mi-name">Foe Young Hai Vegetarisch</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€14,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="menu-category" id="cat-groente">
+      <div class="cat-header">
+        <h2 data-i18n="category.groente">Groente Gerechten</h2>
+      </div>
+      <div class="cat-note">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</div>
+      <div class="menu-items">
+
+        <a class="menu-item menu-item-link" href="items/180-tjap-tjoy-met-varkensvlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">180</span>
+          <div class="mi-info">
+            <span class="mi-name">Tjap Tjoy met Varkensvlees</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€15,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/181-tjap-tjoy-met-kipfilet.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">181</span>
+          <div class="mi-info">
+            <span class="mi-name">Tjap Tjoy met Kipfilet</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€15,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/182-tjap-tjoy-met-rundvlees.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/182-tjap-tjoy-150x150.jpg"
+              alt="Tjap Tjoy met Rundvlees" loading="lazy">
+          </div>
+          <span class="mi-num">182</span>
+          <div class="mi-info">
+            <span class="mi-name">Tjap Tjoy met Rundvlees</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€18,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/183-tjap-tjoy-speciaal.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">183</span>
+          <div class="mi-info">
+            <span class="mi-name">Tjap Tjoy Speciaal</span>
+            <span class="mi-desc">Met kip en varkensvlees. Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 ·
+              Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€18,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/184-tjap-tjoy-met-garnalen.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">184</span>
+          <div class="mi-info">
+            <span class="mi-name">Tjap Tjoy met Garnalen</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€18,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/185-gado-gado.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/185-gado-gado-150x150.jpg" alt="Gado Gado"
+              loading="lazy">
+          </div>
+          <span class="mi-num">185</span>
+          <div class="mi-info">
+            <span class="mi-name">Gado Gado</span>
+            <span class="mi-desc">Salade van diverse groenten in pindasaus. Standaard met witte rijst. Nasi/bami i.p.v.
+              rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€14,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/186-tjap-tjoy-vegetarisch.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">186</span>
+          <div class="mi-info">
+            <span class="mi-name">Tjap Tjoy Vegetarisch</span>
+            <span class="mi-desc">Standaard met witte rijst. Nasi/bami i.p.v. rijst +€3,00 · Mihoen +€4,00</span>
+          </div>
+          <span class="mi-price">€14,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="menu-category" id="cat-nasi">
+      <div class="cat-header">
+        <h2 data-i18n="category.nasi">Chinese Nasi Gerechten</h2>
+      </div>
+
+      <div class="menu-items">
+
+        <a class="menu-item menu-item-link" href="items/190-nasi-goreng-met-ei-en-kip.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">190</span>
+          <div class="mi-info">
+            <span class="mi-name">Nasi Goreng met Ei en Kip</span>
+
+          </div>
+          <span class="mi-price">€10,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/191-nasi-goreng-met-sate.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">191</span>
+          <div class="mi-info">
+            <span class="mi-name">Nasi Goreng met Saté</span>
+            <span class="mi-desc">4 stokjes</span>
+          </div>
+          <span class="mi-price">€17,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/192-nasi-goreng-met-kip-en-sate.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/192-nasi-goreng-kipsate-150x150.jpg"
+              alt="Nasi Goreng met Kip en Saté" loading="lazy">
+          </div>
+          <span class="mi-num">192</span>
+          <div class="mi-info">
+            <span class="mi-name">Nasi Goreng met Kip en Saté</span>
+
+          </div>
+          <span class="mi-price">€17,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/193-nasi-young-chow.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/193Nasi-young-chow.jpg" alt="Nasi Young Chow"
+              loading="lazy">
+          </div>
+          <span class="mi-num">193</span>
+          <div class="mi-info">
+            <span class="mi-name">Nasi Young Chow</span>
+            <span class="mi-desc">Met garnalen en vlees</span>
+          </div>
+          <span class="mi-price">€18,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/194-nasi-goreng-met-garnalen.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/194-nasi-gorenggarnalen-150x150.jpg"
+              alt="Nasi Goreng met Garnalen" loading="lazy">
+          </div>
+          <span class="mi-num">194</span>
+          <div class="mi-info">
+            <span class="mi-name">Nasi Goreng met Garnalen</span>
+
+          </div>
+          <span class="mi-price">€18,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/195-nasi-met-kipfilet.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/195-nasi-kipfilet-150x150.jpg"
+              alt="Nasi met Kipfilet" loading="lazy">
+          </div>
+          <span class="mi-num">195</span>
+          <div class="mi-info">
+            <span class="mi-name">Nasi met Kipfilet</span>
+
+          </div>
+          <span class="mi-price">€17,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/196-nasi-met-rundvlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">196</span>
+          <div class="mi-info">
+            <span class="mi-name">Nasi met Rundvlees</span>
+
+          </div>
+          <span class="mi-price">€18,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="menu-category" id="cat-bami">
+      <div class="cat-header">
+        <h2 data-i18n="category.bami">Chinese Bami Gerechten</h2>
+      </div>
+
+      <div class="menu-items">
+
+        <a class="menu-item menu-item-link" href="items/200-bami-goreng-met-ei-en-kip.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/200-bami-goreng-150x150.jpg"
+              alt="Bami Goreng met Ei en Kip" loading="lazy">
+          </div>
+          <span class="mi-num">200</span>
+          <div class="mi-info">
+            <span class="mi-name">Bami Goreng met Ei en Kip</span>
+
+          </div>
+          <span class="mi-price">€10,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/201-bami-goreng-met-sate.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/201-bami-met-sate-150x150.jpg"
+              alt="Bami Goreng met Saté" loading="lazy">
+          </div>
+          <span class="mi-num">201</span>
+          <div class="mi-info">
+            <span class="mi-name">Bami Goreng met Saté</span>
+            <span class="mi-desc">4 stokjes</span>
+          </div>
+          <span class="mi-price">€17,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/202-bami-goreng-met-kip-en-sate.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/202-bami-goreng-kipsate-150x150.jpg"
+              alt="Bami Goreng met Kip en Saté" loading="lazy">
+          </div>
+          <span class="mi-num">202</span>
+          <div class="mi-info">
+            <span class="mi-name">Bami Goreng met Kip en Saté</span>
+
+          </div>
+          <span class="mi-price">€17,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/203-bami-goreng-met-garnalen.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/203-bamigarnalen-150x150.jpg"
+              alt="Bami Goreng met Garnalen" loading="lazy">
+          </div>
+          <span class="mi-num">203</span>
+          <div class="mi-info">
+            <span class="mi-name">Bami Goreng met Garnalen</span>
+
+          </div>
+          <span class="mi-price">€18,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/204-bami-goreng-met-kipfilet.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">204</span>
+          <div class="mi-info">
+            <span class="mi-name">Bami Goreng met Kipfilet</span>
+
+          </div>
+          <span class="mi-price">€17,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/205-bami-goreng-met-rundvlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">205</span>
+          <div class="mi-info">
+            <span class="mi-name">Bami Goreng met Rundvlees</span>
+
+          </div>
+          <span class="mi-price">€18,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/206-tjauw-min-met-kipfilet.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/206-Tjauw-min.jpg" alt="Tjauw Min met Kipfilet"
+              loading="lazy">
+          </div>
+          <span class="mi-num">206</span>
+          <div class="mi-info">
+            <span class="mi-name">Tjauw Min met Kipfilet</span>
+
+          </div>
+          <span class="mi-price">€17,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/207-tjauw-min-met-ei-en-kip.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">207</span>
+          <div class="mi-info">
+            <span class="mi-name">Tjauw Min met Ei en Kip</span>
+
+          </div>
+          <span class="mi-price">€10,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/208-tjauw-min-met-rundvlees.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/208-Tjauw-min-rundvlees-150x150.jpg"
+              alt="Tjauw Min met Rundvlees" loading="lazy">
+          </div>
+          <span class="mi-num">208</span>
+          <div class="mi-info">
+            <span class="mi-name">Tjauw Min met Rundvlees</span>
+
+          </div>
+          <span class="mi-price">€18,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="menu-category" id="cat-mihoen">
+      <div class="cat-header">
+        <h2 data-i18n="category.mihoen">Mihoen Gerechten</h2>
+      </div>
+
+      <div class="menu-items">
+
+        <a class="menu-item menu-item-link" href="items/210-mihoen-goreng-met-varkensvlees.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/210-mihoen-varken-150x150.jpg"
+              alt="Mihoen Goreng met Varkensvlees" loading="lazy">
+          </div>
+          <span class="mi-num">210</span>
+          <div class="mi-info">
+            <span class="mi-name">Mihoen Goreng met Varkensvlees</span>
+
+          </div>
+          <span class="mi-price">€16,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/211-mihoen-goreng-met-kipfilet.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/211-mihoen-kipfilet-150x150.jpg"
+              alt="Mihoen Goreng met Kipfilet" loading="lazy">
+          </div>
+          <span class="mi-num">211</span>
+          <div class="mi-info">
+            <span class="mi-name">Mihoen Goreng met Kipfilet</span>
+
+          </div>
+          <span class="mi-price">€16,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/212-mihoen-goreng-met-rundvlees.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">212</span>
+          <div class="mi-info">
+            <span class="mi-name">Mihoen Goreng met Rundvlees</span>
+
+          </div>
+          <span class="mi-price">€19,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/213-mihoen-goreng-met-garnalen.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">213</span>
+          <div class="mi-info">
+            <span class="mi-name">Mihoen Goreng met Garnalen</span>
+
+          </div>
+          <span class="mi-price">€19,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/214-sing-chow-mihoen.html">
+          <div class="menu-item-media">
+            <img src="https://www.sunsien.nl/wp-content/uploads/2022/08/214-Sing-chow-150x150.jpg"
+              alt="Sing Chow Mihoen" loading="lazy">
+          </div>
+          <span class="mi-num">214</span>
+          <div class="mi-info">
+            <span class="mi-name">Sing Chow Mihoen</span>
+            <span class="mi-desc">Met garnalen, vlees en kerrie</span>
+          </div>
+          <span class="mi-price">€19,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/215-mihoen-goreng-speciaal.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">215</span>
+          <div class="mi-info">
+            <span class="mi-name">Mihoen Goreng Speciaal</span>
+            <span class="mi-desc">Met kip en varkensvlees</span>
+          </div>
+          <span class="mi-price">€19,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="menu-category" id="cat-snacks">
+      <div class="cat-header">
+        <h2 data-i18n="category.snacks">Snacks &amp; Bijgerechten</h2>
+      </div>
+
+      <div class="menu-items">
+
+        <a class="menu-item menu-item-link" href="items/220-frikandel.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">220</span>
+          <div class="mi-info">
+            <span class="mi-name">Frikandel</span>
+
+          </div>
+          <span class="mi-price">€2,80</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/245-patat.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">245</span>
+          <div class="mi-info">
+            <span class="mi-name">Patat</span>
+
+          </div>
+          <span class="mi-price">€3,90</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/246-patat-met-fritesaus.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">246</span>
+          <div class="mi-info">
+            <span class="mi-name">Patat met Fritesaus</span>
+
+          </div>
+          <span class="mi-price">€4,70</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/247-patat-met-currysaus.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">247</span>
+          <div class="mi-info">
+            <span class="mi-name">Patat met Currysaus</span>
+
+          </div>
+          <span class="mi-price">€4,70</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/248-patat-speciaal.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">248</span>
+          <div class="mi-info">
+            <span class="mi-name">Patat Speciaal</span>
+
+          </div>
+          <span class="mi-price">€5,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/249-patat-oorlog.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">249</span>
+          <div class="mi-info">
+            <span class="mi-name">Patat Oorlog</span>
+
+          </div>
+          <span class="mi-price">€5,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/250-groot-patat.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">250</span>
+          <div class="mi-info">
+            <span class="mi-name">Groot Patat</span>
+
+          </div>
+          <span class="mi-price">€6,80</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/260-surinaams-broodje.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+          <span class="mi-num">260</span>
+          <div class="mi-info">
+            <span class="mi-name">Surinaams Broodje</span>
+
+          </div>
+          <span class="mi-price">€1,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/portie-nasi-bami.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+
+          <div class="mi-info">
+            <span class="mi-name">Portie Nasi / Bami</span>
+
+          </div>
+          <span class="mi-price">€4,00 / €7,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/portie-mihoen.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+
+          <div class="mi-info">
+            <span class="mi-name">Portie Mihoen</span>
+
+          </div>
+          <span class="mi-price">€8,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/portie-witte-rijst.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+
+          <div class="mi-info">
+            <span class="mi-name">Portie Witte Rijst</span>
+
+          </div>
+          <span class="mi-price">€3,50 / €4,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/portie-kroepoek.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+
+          <div class="mi-info">
+            <span class="mi-name">Portie Kroepoek</span>
+
+          </div>
+          <span class="mi-price">€4,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/zakje-sambal.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+
+          <div class="mi-info">
+            <span class="mi-name">Zakje Sambal</span>
+
+          </div>
+          <span class="mi-price">€0,50</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/bananenchips.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+
+          <div class="mi-info">
+            <span class="mi-name">Bananenchips</span>
+
+          </div>
+          <span class="mi-price">€4,00</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="menu-item menu-item-link" href="items/maizena-koek.html">
+          <div class="menu-item-media">
+            <div class="menu-item-media-placeholder">Foto volgt</div>
+          </div>
+
+          <div class="mi-info">
+            <span class="mi-name">Maizena Koek</span>
+
+          </div>
+          <span class="mi-price">€3,80</span>
+          <span class="menu-item-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://www.sunsien.nl/wp-content/uploads/2024/03/logo-voetbalclub.png2_-220x101.png" alt="Sun Sien"
+            class="footer-logo">
+          <p>
+            <span data-i18n="brand.lineOne">Surinaams • Chinees • Caribisch</span><br>
+            <span data-i18n="brand.lineTwo">Afhaalcentrum in Hoogvliet</span>
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="menu.html" data-i18n="nav.menu">Menu</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact</a>
+          <a href="https://allergenen.sho-horeca.nl/kaart/sunsien" target="_blank" rel="noreferrer"
+            data-i18n="common.allergens">Allergenen</a>
+        </div>
+        <div class="footer-contact">
+          <a href="tel:0104382505">📞 010 438 2505</a>
+          <a href="mailto:info@sunsien.nl">✉️ info@sunsien.nl</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Oude+Wal+47+3193+EM+Hoogvliet+Rotterdam"
+            target="_blank" rel="noreferrer">Oude Wal 47, 3193 EM Hoogvliet Rotterdam</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 Sun Sien Afhaalcentrum – Alle rechten voorbehouden</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="list-fab" id="list-toggle" type="button" aria-controls="list-drawer" aria-expanded="false">
+    <span class="list-fab-burst" aria-hidden="true">⚡</span>
+    <span class="list-fab-copy">
+      <span class="list-fab-title" data-i18n="list.cta">BOOM ORDER LIST</span>
+      <span class="list-fab-total" id="list-total">€0,00</span>
+    </span>
+    <span class="list-fab-count" id="list-count">0</span>
+  </button>
+
+  <div class="list-overlay" id="list-overlay" hidden></div>
+
+  <aside class="list-drawer" id="list-drawer" aria-hidden="true">
+    <div class="list-drawer-header">
+      <div>
+        <span class="label-tag" data-i18n="list.label">Lijstje</span>
+        <h2 data-i18n="list.drawerTitle">Jouw bestelling</h2>
+      </div>
+      <button class="list-close" id="list-close" type="button" aria-label="Lijstje sluiten"
+        data-i18n-aria-label="list.close">×</button>
+    </div>
+
+    <div class="list-drawer-body">
+      <p class="list-empty" id="list-empty" data-i18n="list.empty">Je lijstje is nog leeg.</p>
+      <div class="list-items" id="list-items"></div>
+    </div>
+
+    <div class="list-drawer-footer">
+      <p class="list-summary" id="list-summary">0 items in je lijstje</p>
+      <div class="list-drawer-actions">
+        <div class="cta-stack">
+          <a href="tel:0104382505" class="btn btn-primary btn-sm" data-i18n="common.callShort">Bel</a>
+          <p class="cta-note" data-i18n="common.callWaitNote"></p>
+        </div>
+        <button class="btn btn-glass btn-sm" id="list-copy" type="button" data-i18n="list.copy">Kopieer (En zet het in
+          je notities!)</button>
+        <button class="btn btn-glass btn-sm" id="list-clear" type="button" data-i18n="list.clear">Wis</button>
+      </div>
+    </div>
+  </aside>
+
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Terug naar boven"
+    data-i18n-aria-label="common.scrollTop">↑</button>
+
+  <script src="site-copy.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
