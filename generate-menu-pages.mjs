@@ -68,12 +68,13 @@ function renderHeader(rootPrefix, { activePage = "" } = {}) {
   const aboutPath = `${rootPrefix}about.html`;
   const menuPath = `${rootPrefix}menu.html`;
   const contactPath = `${rootPrefix}contact.html`;
+  const lightLogoPath = `${rootPrefix}images/hero-title-logo-light.png`;
 
   return `
   <header class="header" id="header">
     <div class="header-inner">
       <a href="${homePath}" class="logo" id="logo">
-        <img src="https://www.sunsien.nl/wp-content/uploads/2024/03/logo-voetbalclub.png2_-220x101.png"
+        <img src="${lightLogoPath}"
           alt="Sun Sien Logo" class="logo-img">
       </a>
 
@@ -111,13 +112,14 @@ function renderFooter(rootPrefix) {
   const homePath = `${rootPrefix}index.html`;
   const menuPath = `${rootPrefix}menu.html`;
   const contactPath = `${rootPrefix}contact.html`;
+  const lightLogoPath = `${rootPrefix}images/hero-title-logo-light.png`;
 
   return `
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <img src="https://www.sunsien.nl/wp-content/uploads/2024/03/logo-voetbalclub.png2_-220x101.png" alt="Sun Sien"
+          <img src="${lightLogoPath}" alt="Sun Sien"
             class="footer-logo">
           <p>
             <span data-i18n="brand.lineOne">Surinaams • Chinees • Caribisch</span><br>

@@ -419,7 +419,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const loadingScreen = document.getElementById('loading-screen');
   const shouldShowLoadingScreen = document.documentElement.classList.contains('show-loading-screen');
   const themeLogoElements = document.querySelectorAll('.logo-img, .footer-logo');
-  const lightModeLogoSrc = 'images/hero-title-logo-light.png';
   const darkModeLogoSrc = 'https://www.sunsien.nl/wp-content/uploads/2024/03/logo-voetbalclub.png2_-220x101.png';
   const darkModeQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
   const OPENING_HOURS = {
@@ -456,12 +455,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('page-loaded');
   }
 
+  themeLogoElements.forEach((image) => {
+    if (!image.dataset.lightLogoSrc) {
+      image.dataset.lightLogoSrc = image.getAttribute('src') || '';
+    }
+  });
+
   function updateThemeLogos() {
     if (themeLogoElements.length === 0) return;
 
-    const nextSrc = darkModeQuery?.matches ? darkModeLogoSrc : lightModeLogoSrc;
-
     themeLogoElements.forEach((image) => {
+      const nextSrc = darkModeQuery?.matches ? darkModeLogoSrc : (image.dataset.lightLogoSrc || '');
+      if (!nextSrc) return;
       if (image.getAttribute('src') === nextSrc) return;
       image.setAttribute('src', nextSrc);
     });
