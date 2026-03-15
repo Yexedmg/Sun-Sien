@@ -3193,12 +3193,18 @@ img {
     font-size: 1.4rem;
     font-weight: 700;
     padding: 18px 0;
-    border-bottom: 1px solid var(--border);
-    color: var(--text-primary);
+    border-bottom: 1px solid rgba(29, 29, 31, 0.12);
+    color: #14171d;
+    -webkit-text-fill-color: currentColor;
     letter-spacing: -0.01em;
   }
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--red);
+    -webkit-text-fill-color: currentColor;
+  }
   .nav-links a:first-child {
-    border-top: 1px solid var(--border);
+    border-top: 1px solid rgba(29, 29, 31, 0.12);
   }
   .nav-toggle { display: flex; }
   .header-actions { position: relative; z-index: 999; }
@@ -3241,7 +3247,7 @@ img {
   .nav-call-note {
     display: block;
     margin: 6px 10px 0;
-    color: var(--text-tertiary);
+    color: #5f6673;
     font-size: 0.75rem;
     line-height: 1.35;
     text-align: center;
