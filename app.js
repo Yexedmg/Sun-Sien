@@ -418,6 +418,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const hoursTable = document.getElementById('hours-table');
   const loadingScreen = document.getElementById('loading-screen');
   const shouldShowLoadingScreen = document.documentElement.classList.contains('show-loading-screen');
+  const themeLogoElements = document.querySelectorAll('.logo-img, .footer-logo');
+  const lightModeLogoSrc = '/images/hero-title-logo-light.png';
+  const darkModeLogoSrc = 'https://www.sunsien.nl/wp-content/uploads/2024/03/logo-voetbalclub.png2_-220x101.png';
+  const darkModeQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
   const OPENING_HOURS = {
     0: { open: 12 * 60 + 30, close: 20 * 60 + 30 },
     1: null,
@@ -450,6 +454,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function markPageLoaded() {
     document.body.classList.add('page-loaded');
+  }
+
+  function updateThemeLogos() {
+    if (themeLogoElements.length === 0) return;
+
+    const nextSrc = darkModeQuery?.matches ? darkModeLogoSrc : lightModeLogoSrc;
+
+    themeLogoElements.forEach((image) => {
+      if (image.getAttribute('src') === nextSrc) return;
+      image.setAttribute('src', nextSrc);
+    });
   }
 
   function dismissLoadingScreen() {
@@ -493,6 +508,13 @@ document.addEventListener('DOMContentLoaded', () => {
     markPageLoaded();
   }
 
+  updateThemeLogos();
+  if (darkModeQuery?.addEventListener) {
+    darkModeQuery.addEventListener('change', updateThemeLogos);
+  } else if (darkModeQuery?.addListener) {
+    darkModeQuery.addListener(updateThemeLogos);
+  }
+
   function readLanguage() {
     try {
       const storedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
@@ -532,6 +554,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('[data-i18n-aria-label]').forEach((element) => {
       element.setAttribute('aria-label', translate(element.dataset.i18nAriaLabel));
+    });
+
+    document.querySelectorAll('[data-i18n-split]').forEach((element) => {
+      const fullText = translate(element.dataset.i18nSplit).trim();
+      const parts = fullText.split(/\s+/).filter(Boolean);
+      const leftWord = parts.shift() ?? fullText;
+      const rightWord = parts.join(' ');
+
+      element.setAttribute('aria-label', fullText);
+      element.innerHTML = rightWord
+        ? `<span class="hero-title-word hero-title-word--left" aria-hidden="true">${escapeHtml(leftWord)}</span><span class="hero-title-word hero-title-word--right" aria-hidden="true">${escapeHtml(rightWord)}</span>`
+        : `<span class="hero-title-word hero-title-word--left" aria-hidden="true">${escapeHtml(leftWord)}</span>`;
     });
 
     updateLanguageToggle();
