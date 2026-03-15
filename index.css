@@ -144,33 +144,23 @@ body.is-loading {
 
 .loading-line {
   position: absolute;
-  left: 18%;
-  top: 1%;
-  width: 68%;
-  height: 36%;
-  overflow: hidden;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-  mix-blend-mode: screen;
   opacity: 0.96;
+  overflow: visible;
 }
 
-.loading-line::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  -webkit-mask: radial-gradient(122% 118% at 8% 118%, transparent 62.5%, #000 64.8%, #000 68%, transparent 70.4%);
-  mask: radial-gradient(122% 118% at 8% 118%, transparent 62.5%, #000 64.8%, #000 68%, transparent 70.4%);
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(202, 20, 20, 0.02) 26%,
-    rgba(202, 20, 20, 0.2) 40%,
-    rgba(255, 224, 173, 0.98) 52%,
-    rgba(202, 20, 20, 0.78) 62%,
-    transparent 100%
-  );
-  filter: blur(1px);
-  transform: translateX(-115%);
+.loading-line-path {
+  fill: none;
+  stroke: url(#loading-arc-glow);
+  stroke-width: 24;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 13 87;
+  stroke-dashoffset: 108;
+  filter: drop-shadow(0 0 8px rgba(255, 224, 173, 0.38));
   animation: loading-line-sweep 1.7s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.24s infinite;
 }
 
@@ -232,7 +222,7 @@ body.is-loading {
 
 @keyframes loading-line-sweep {
   0% {
-    transform: translateX(-115%);
+    stroke-dashoffset: 108;
     opacity: 0;
   }
   20% {
@@ -242,7 +232,7 @@ body.is-loading {
     opacity: 1;
   }
   100% {
-    transform: translateX(115%);
+    stroke-dashoffset: -12;
     opacity: 0;
   }
 }
@@ -3664,7 +3654,8 @@ img {
     transition-duration: 0.2s;
   }
 
-  .loading-orb {
+  .loading-orb,
+  .loading-line-path {
     animation: none;
   }
 
