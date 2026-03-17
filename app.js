@@ -1230,7 +1230,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function navigateFromNavMenu(link) {
-    finishNavMenuClose();
+    if (navLinks.classList.contains('open')) {
+      setNavMenuOpen(false);
+    }
     window.location.assign(link.href);
   }
 
@@ -1287,7 +1289,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (!isSameTabPageNavigationLink(link)) {
-          finishNavMenuClose();
+          if (navLinks.classList.contains('open')) {
+            setNavMenuOpen(false);
+          }
           return;
         }
 

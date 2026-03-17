@@ -3997,6 +3997,7 @@ img {
 
   .nav-links a {
     color: #eaebed;
+    -webkit-text-fill-color: #eaebed;
     border-bottom-color: rgba(255, 255, 255, 0.12);
   }
   .nav-links a:first-child {
