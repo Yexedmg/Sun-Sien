@@ -3994,6 +3994,14 @@ img {
   .nav-call-note {
     color: #aeb4bf;
   }
+
+  .nav-links a {
+    color: #eaebed;
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+  }
+  .nav-links a:first-child {
+    border-top-color: rgba(255, 255, 255, 0.12);
+  }
 }
 
 /* Tablet */
