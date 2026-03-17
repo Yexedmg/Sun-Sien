@@ -113,8 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'contact.sourceNote': 'Bronnen: het originele <a href="https://www.sunsien.nl" target="_blank" rel="noreferrer">sunsien.nl</a> voor de uitleg over de wachtrij, de publieke <a href="https://allergenen.sho-horeca.nl/kaart/sunsien" target="_blank" rel="noreferrer">allergenenkaart</a> voor dieetinformatie, en publieke Google-gelinkte reviewsnippets via <a href="https://restaurantguru.com/Sun-Sien-Hoogvliet-Rotterdam" target="_blank" rel="noreferrer">Restaurant Guru</a>.',
       'faq.queueQuestion': 'Sta ik in dezelfde rij met mensen die aan de balie bestellen als ik via telefoon bestel ?',
       'faq.queueAnswer': 'Ja. Bestellingen via telefoon en en mensen die bestelling aan de balie doen sluiten zich aan te sluiten in 1 rij',
-      'faq.halalQuestion': 'Zijn er halal opties?',
-      'faq.halalAnswer': 'Op de publieke menukaart en allergenenkaart staat geen halal-label. Bel even voor een specifiek gerecht als dit belangrijk is voor je bestelling.',
+
       'faq.phoneQuestion': 'Kan ik telefonisch bestellen?',
       'faq.phoneAnswer': 'Ja, maar voor telefonisch geplaatste bestellingen geldt volgens de site meestal minimaal een uur wachttijd voor afhalen.',
       'faq.fridayQuestion': 'Wanneer kan ik op vrijdag het beste bellen?',
@@ -288,8 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'contact.sourceNote': 'Sources: the original <a href="https://www.sunsien.nl" target="_blank" rel="noreferrer">sunsien.nl</a> site for the queue explanation, the public <a href="https://allergenen.sho-horeca.nl/kaart/sunsien" target="_blank" rel="noreferrer">allergen page</a> for diet info, and public Google-linked review snippets via <a href="https://restaurantguru.com/Sun-Sien-Hoogvliet-Rotterdam" target="_blank" rel="noreferrer">Restaurant Guru</a>.',
       'faq.queueQuestion': 'If I place an order via phone, do I wait in the same queue as people who order in-person?',
       'faq.queueAnswer': 'Yes. Phone orders and counter orders wait in the same queue to place/receive their order',
-      'faq.halalQuestion': 'Are there halal options?',
-      'faq.halalAnswer': 'There is no halal label on the public menu or allergen page. If this matters for your order, call first and ask about the specific dish.',
+
       'faq.phoneQuestion': 'Can I order by phone?',
       'faq.phoneAnswer': 'Yes, but the site says phone orders usually have at least a one hour wait before pickup.',
       'faq.fridayQuestion': 'When is the best time to call on Friday?',
